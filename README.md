@@ -16,9 +16,11 @@ Sabri Baba için tasarlanmış, sade ve şık bir tansiyon takip uygulaması.
 
 ## APK indirme
 
-En güncel APK, deponun **Releases** bölümündedir:
+📥 **[TansiyonTakip.apk — en son sürümü indir](https://github.com/halilwb/tansiyon-takip/releases/latest/download/TansiyonTakip.apk)**
 
-`Releases → Tansiyon Takip → TansiyonTakip.apk`
+Sürüm notları: [Releases](https://github.com/halilwb/tansiyon-takip/releases)
+
+Kurulum: APK'yı telefona indirip aç. Android, bilinmeyen kaynaklardan uygulama yükleme iznini isteyebilir.
 
 ## APK'yı kendin oluşturma
 
