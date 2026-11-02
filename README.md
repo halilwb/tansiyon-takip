@@ -1,5 +1,7 @@
 # Tansiyon Takip
 
+[![Build APK](https://github.com/halilwb/tansiyon-takip/actions/workflows/build.yml/badge.svg)](https://github.com/halilwb/tansiyon-takip/actions/workflows/build.yml)
+
 Sabri Baba için tasarlanmış, sade ve şık bir tansiyon takip uygulaması.
 
 **Renk paleti:** beyaz + lacivert tonları, vurgu rengi sarı (kenarlıklar, rozetler ve grafik detaylarında).
