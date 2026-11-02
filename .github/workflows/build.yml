@@ -29,16 +29,17 @@ jobs:
         run: chmod +x gradlew
 
       - name: Decode signing keystore
-        if: ${{ secrets.SIGNING_KEYSTORE_BASE64 != '' }}
         env:
           KEYSTORE_BASE64: ${{ secrets.SIGNING_KEYSTORE_BASE64 }}
         run: |
-          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/tansiyon-release.jks"
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/tansiyon-release.jks"
+            echo "SIGNING_KEYSTORE_PATH=$RUNNER_TEMP/tansiyon-release.jks" >> "$GITHUB_ENV"
+          fi
 
       - name: Build release APK
         env:
           VERSION_CODE: ${{ github.run_number }}
-          SIGNING_KEYSTORE_PATH: ${{ secrets.SIGNING_KEYSTORE_BASE64 != '' && format('{0}/tansiyon-release.jks', runner.temp) || '' }}
           SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
           SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
           SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
